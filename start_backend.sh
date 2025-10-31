@@ -1,0 +1,6 @@
+#!/bin/bash
+cd backend
+source venv/bin/activate 2>/dev/null || python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt 2>/dev/null || pip install -r requirements.txt
+uvicorn main:app --reload
+
